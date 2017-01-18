@@ -1,0 +1,50 @@
+<h1>hi</h1>
+
+<table border="1">
+	<tr>
+		<th>Name</th>
+		<th>Variant</th>
+		<th>Engine</th>
+		<th>Model</th>
+		<th>Cost</th>
+		
+	</tr>
+	<% @tab.each do |t| %>
+	<tr>
+		<td>
+			<%= t.customer.name %>
+		</td>
+		<td>
+			<%= t.variant.name %>
+		</td>
+		<td>
+			<%= t.variant.engine %>
+		</td>
+		<td>
+			<%= t.model.name %>
+		</td>
+		<td>
+			<%= t.cost %>
+		</td>
+		
+	</tr>
+	<% end %>
+</table>
+
+
+<p>
+	Number of customer who bought i20 : <%= @que %>
+</p>
+
+<% @que1.each do |q| %>
+<p>Second Choice of customer ( <%= q.customer.name %> ) who bought i20 : <%= q.Secondchoice %>  </p>
+<% end %>
+
+<p>
+	Favourite Car : <%= @que2 %>
+</p>
+
+<p>
+	Total sales of Hyundai : <%= @que3 %>
+</p>
+

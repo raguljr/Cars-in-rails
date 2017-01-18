@@ -1,0 +1,55 @@
+
+
+
+<table border="1">
+<tr>
+	<th>Customer Name</th>
+	<th>Variant Name</th>
+	<th>Model</th>
+	<th>Car Name</th>
+	<th>Car Cost</th>
+	<th>Car Manufacturer</th>
+	<th>Second Choice</th>
+</tr>
+<% @trans.each do |t| %>
+	<tr>
+		<td>
+			<%= t.cust_name %>
+		</td>
+		<td>
+			<%= t.varn %>
+		</td>
+		<td>
+			<%= t.name %>
+		</td>
+		<td>
+			<%= t.carn %>
+		</td>
+		<td>
+			<%= t.cost %>
+		</td>
+		<td>
+			<%= t.man %>
+		</td>
+		<td>
+			<%= t.cho %>
+		</td>
+	</tr>
+	<% end %>
+</table>
+
+<% @cs.each do |tt| %>
+<p>Customer who bought i20 : <%= tt.cc %></p>
+<% end %>
+
+<% @tots.each do |ttt| %>
+<p>Total sales of Hyundai : <%= ttt.ccc %> ( <%= ttt.cou %> ) </p>
+<% end %>
+
+<% @ch.each do |tttt| %>
+<p>Favourite Car : <%= tttt.cccc %>  </p>
+<% end %>
+
+<% @sch.each do |q| %>
+<p>Second Choice of <%= q.cus %> who bought i20 : <%= q.choice %>  </p>
+<% end %>
